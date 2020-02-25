@@ -188,7 +188,7 @@ function processDuplicateFree(myArr, callback){
   const sortedArr= myArr.sort();
   for(let i=0; i< myArr.length; i++){
     if(sortedArr[i] === sortedArr[i+1]){
-      sortedArr.push(sortedArr[i]);
+      // sortedArr.(sortedArr[i]);
     }
   }
 
