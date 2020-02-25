@@ -186,16 +186,16 @@ function processContains(item, list, callback) {
 */
 function processDuplicateFree(myArr, callback){
   const sortedArr= myArr.sort();
+  let answerArr= [];
   for(let i=0; i< myArr.length; i++){
-    if(sortedArr[i] === sortedArr[i+1]){
-      // sortedArr.(sortedArr[i]);
+    if(sortedArr[i+1] !== sortedArr[i]){
+      answerArr.push(sortedArr[i]);
     }
   }
-
-  console.log(sortedArr);
-  return sortedArr;
+  console.log(answerArr);
+  return answerArr;
 }
-processDuplicateFree([1,1,2,2,3], (arr) => arr);
+// processDuplicateFree([1,1,2,2,3], (arr) => arr);
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
